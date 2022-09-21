@@ -1,5 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import EasingAPI from './src/apis/Easing';
+import KeyboardAPI from './src/apis/KeyboardAPI';
+import LayoutAnimationAPI from './src/apis/LayoutAnimationAPI';
+import PixelRatioAPI from './src/apis/PixelRatioAPI';
 import MyActivityIndicator from './src/core/MyActivityIndicator';
 import MyButton from './src/core/MyButton';
 import MyFlatList from './src/core/MyFlatList';
@@ -33,9 +37,9 @@ export default function App() {
       {/* <MyModal /> */}
       {/* <MyPressable /> */}
       {/* <MyRefreshControl /> */}
-      
+
       {/* <MySafeAreaView /> */}
-      
+
       {/* <MyScrollView /> */}
       {/* <MySectionList /> */}
       {/* <MyVirtualizedList /> */}
@@ -50,6 +54,17 @@ export default function App() {
       {/* <MyTouchableHighlight />
       <MyTouchableOpacity />
       <MyTouchableWithoutFeedback /> */}
+
+
+
+      {/* ------------ API's --------------- */}
+
+
+      {/* <EasingAPI />   evitar mostrar, too much */}
+
+      {/* <KeyboardAPI /> */}
+      {/* <LayoutAnimationAPI /> */}
+      <PixelRatioAPI />
     </View>
   );
 }
