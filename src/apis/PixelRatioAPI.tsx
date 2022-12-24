@@ -1,16 +1,22 @@
-import React from 'react';
-import { Image, PixelRatio, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import React from "react";
+import {
+  Image,
+  PixelRatio,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const size = 50;
-const cat = require('../logo.jpg')
+const cat = require("../logo.jpg");
 
 export default function PixelRatioAPI() {
-
-    return (
-        <>
-            <SafeAreaView>
-                {/* <View style={styles.container}>
+  return (
+    <>
+      <SafeAreaView>
+        {/* <View style={styles.container}>
                     <Text>Current Pixel Ratio is:</Text>
                     <Text style={styles.value}>{PixelRatio.get()}</Text>
                 </View>
@@ -40,30 +46,30 @@ export default function PixelRatioAPI() {
                     />
                 </View> */}
 
-                <Image
-                    style={{
-                        width: size,
-                        height: size,
-                    }}
-                    source={cat} />
-            </SafeAreaView>
-        </>
-    )
+        <Image
+          style={{
+            width: size,
+            height: size,
+          }}
+          source={cat}
+        />
+      </SafeAreaView>
+    </>
+  );
 }
 
-
 const styles = StyleSheet.create({
-    scrollContainer: {
-        flext: 1,
-        marginTop: 2,
-        justifyContent: 'center',
-    },
-    container: {
-        alignItems: 'center',
-    },
-    value: {
-        fontSize: 24,
-        marginBottom: 12,
-        marginTop: 4,
-    },
+  scrollContainer: {
+    flext: 1,
+    marginTop: 2,
+    justifyContent: "center",
+  },
+  container: {
+    alignItems: "center",
+  },
+  value: {
+    fontSize: 24,
+    marginBottom: 12,
+    marginTop: 4,
+  },
 });

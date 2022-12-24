@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Animated,
   Easing,
@@ -9,7 +9,7 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from 'react-native';
+} from "react-native";
 
 export default function EasingAPI() {
   let opacity = new Animated.Value(0);
@@ -20,7 +20,7 @@ export default function EasingAPI() {
       toValue: 1,
       duration: 1200,
       easing,
-      useNativeDriver: false
+      useNativeDriver: false,
     }).start();
   };
 
@@ -48,9 +48,12 @@ export default function EasingAPI() {
       <SectionList
         style={styles.list}
         sections={SECTIONS}
-        keyExtractor={item => item.title}
+        keyExtractor={(item) => item.title}
         renderItem={({ item }) => (
-          <TouchableOpacity onPress={() => animate(item.easing)} style={styles.listRow}>
+          <TouchableOpacity
+            onPress={() => animate(item.easing)}
+            style={styles.listRow}
+          >
             <Text>{item.title}</Text>
           </TouchableOpacity>
         )}
@@ -60,50 +63,50 @@ export default function EasingAPI() {
       />
     </SafeAreaView>
   );
-};
+}
 
 const SECTIONS = [
   {
-    title: 'Predefined animations',
+    title: "Predefined animations",
     data: [
-      { title: 'Bounce', easing: Easing.bounce },
-      { title: 'Ease', easing: Easing.ease },
-      { title: 'Elastic', easing: Easing.elastic(4) },
+      { title: "Bounce", easing: Easing.bounce },
+      { title: "Ease", easing: Easing.ease },
+      { title: "Elastic", easing: Easing.elastic(4) },
     ],
   },
   {
-    title: 'Standard functions',
+    title: "Standard functions",
     data: [
-      { title: 'Linear', easing: Easing.linear },
-      { title: 'Quad', easing: Easing.quad },
-      { title: 'Cubic', easing: Easing.cubic },
+      { title: "Linear", easing: Easing.linear },
+      { title: "Quad", easing: Easing.quad },
+      { title: "Cubic", easing: Easing.cubic },
     ],
   },
   {
-    title: 'Additional functions',
+    title: "Additional functions",
     data: [
       {
-        title: 'Bezier',
+        title: "Bezier",
         easing: Easing.bezier(0, 2, 1, -1),
       },
-      { title: 'Circle', easing: Easing.circle },
-      { title: 'Sin', easing: Easing.sin },
-      { title: 'Exp', easing: Easing.exp },
+      { title: "Circle", easing: Easing.circle },
+      { title: "Sin", easing: Easing.sin },
+      { title: "Exp", easing: Easing.exp },
     ],
   },
   {
-    title: 'Combinations',
+    title: "Combinations",
     data: [
       {
-        title: 'In + Bounce',
+        title: "In + Bounce",
         easing: Easing.in(Easing.bounce),
       },
       {
-        title: 'Out + Exp',
+        title: "Out + Exp",
         easing: Easing.out(Easing.exp),
       },
       {
-        title: 'InOut + Elastic',
+        title: "InOut + Elastic",
         easing: Easing.inOut(Easing.elastic(1)),
       },
     ],
@@ -113,32 +116,32 @@ const SECTIONS = [
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#20232a',
+    backgroundColor: "#20232a",
   },
   title: {
     marginTop: 10,
-    textAlign: 'center',
-    color: '#61dafb',
+    textAlign: "center",
+    color: "#61dafb",
   },
   boxContainer: {
     height: 160,
-    alignItems: 'center',
+    alignItems: "center",
   },
   box: {
     marginTop: 32,
     borderRadius: 4,
-    backgroundColor: '#61dafb',
+    backgroundColor: "#61dafb",
   },
   list: {
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
   },
   listHeader: {
     paddingHorizontal: 8,
     paddingVertical: 4,
-    backgroundColor: '#f4f4f4',
-    color: '#999',
+    backgroundColor: "#f4f4f4",
+    color: "#999",
     fontSize: 12,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   listRow: {
     padding: 8,
